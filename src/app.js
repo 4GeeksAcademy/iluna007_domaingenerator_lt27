@@ -16,15 +16,20 @@ let noun = ["kitty", "cat", "pussycat", "kitten", "wildcat", "michi"];
 let extensions = [".com", ".net", ".us", ".io"];
 
 function domaingenerator() {
+  let domain = "";
   for (let i = 1; i < 9; i++) {
-    let domain =
-      pronoun[Math.floor(Math.random() * pronoun.length + 0)] +
-      adj[Math.floor(Math.random() * adj.length + 0)] +
-      noun[Math.floor(Math.random() * noun.length + 0)] +
-      extensions[Math.floor(Math.random() * extensions.length + 0)];
-
-    return domain;
+    for (let j = 0; j < 1; j++) {
+      domain +=
+        i +
+        " " +
+        pronoun[Math.floor(Math.random() * pronoun.length)] +
+        adj[Math.floor(Math.random() * adj.length)] +
+        noun[Math.floor(Math.random() * noun.length)] +
+        extensions[Math.floor(Math.random() * extensions.length)] +
+        "<br>";
+    }
   }
+  return domain;
 }
 
 document.getElementById("dg").addEventListener("click", function() {
