@@ -17,16 +17,13 @@ let extensions = [".com", ".net", ".us", ".io"];
 
 function domaingenerator() {
   let domain = "";
-  for (let i = 1; i < 9; i++) {
-    for (let j = 0; j < 1; j++) {
-      domain +=
-        i +
-        " " +
-        pronoun[Math.floor(Math.random() * pronoun.length)] +
-        adj[Math.floor(Math.random() * adj.length)] +
-        noun[Math.floor(Math.random() * noun.length)] +
-        extensions[Math.floor(Math.random() * extensions.length)] +
-        "<br>";
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < extensions.length; l++) {
+          domain += pronoun[i] + adj[j] + noun[k] + extensions[l] + "<br>";
+        }
+      }
     }
   }
   return domain;
