@@ -10,6 +10,8 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 };
 
+var p = document.getElementById("dg");
+
 let pronoun = ["the", "our", "a", "you"];
 let adj = ["yellow", "fat", "skinny", "red"];
 let noun = ["kitty", "cat", "pussycat", "kitten", "wildcat", "michi"];
@@ -17,6 +19,7 @@ let extensions = [".com", ".net", ".us", ".io"];
 
 function domaingenerator() {
   let domain = "";
+
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
@@ -29,6 +32,6 @@ function domaingenerator() {
   return domain;
 }
 
-document.getElementById("dg").addEventListener("click", function() {
+p.addEventListener("click", function() {
   this.innerHTML = domaingenerator();
 });
