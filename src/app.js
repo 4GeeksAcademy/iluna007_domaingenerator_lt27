@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -6,18 +5,17 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  domainGenerator();
 };
 
-var p = document.getElementById("dg");
+const p = document.getElementById("dg");
 
-let pronoun = ["the", "our", "a", "you"];
-let adj = ["yellow", "fat", "skinny", "red"];
-let noun = ["kitty", "cat", "pussycat", "kitten", "wildcat", "michi"];
-let extensions = [".com", ".net", ".us", ".io"];
+const pronoun = ["the", "our", "a", "you"];
+const adj = ["yellow", "fat", "skinny", "red"];
+const noun = ["kitty", "cat", "pussycat", "kitten", "wildcat", "michi"];
+const extensions = [".com", ".net", ".us", ".io"];
 
-function domaingenerator() {
+function domainGenerator() {
   let domain = "";
 
   for (let i = 0; i < pronoun.length; i++) {
@@ -33,5 +31,5 @@ function domaingenerator() {
 }
 
 p.addEventListener("click", function() {
-  this.innerHTML = domaingenerator();
+  this.innerHTML = domainGenerator();
 });
